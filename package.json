@@ -1,10 +1,9 @@
 {
   "name": "open-path",
   "main": "./lib/open-path",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "open path or url by on shortcut",
-  "keywords": [
-  ],
+  "keywords": [],
   "activationCommands": {
     "atom-workspace": "open-path:toggle"
   },
