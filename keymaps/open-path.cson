@@ -1,0 +1,8 @@
+'.platform-darwin atom-text-editor:not([mini])':
+	'cmd-o': 'open-path:toggle'
+
+'.platform-win32 atom-text-editor:not([mini])':
+	'ctrl-o': 'open-path:toggle'
+
+'.platform-linux atom-text-editor:not([mini])':
+	'ctrl-o': 'open-path:toggle'
