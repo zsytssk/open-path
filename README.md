@@ -1,6 +1,6 @@
 ## open-path package
 
-use one shortcut open url or path under cursor 
+use one shortcut open url or path under cursor
 
 ## Keymap
 
