@@ -1,7 +1,7 @@
 {
   "name": "open-path",
   "main": "./lib/open-path",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "open path or url by on shortcut",
   "keywords": [],
   "activationCommands": {
