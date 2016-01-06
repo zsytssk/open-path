@@ -6,7 +6,7 @@ _ = require 'underscore-plus'
 
 module.exports = OpenPath =
 
-	urlRegex: /[A-Z a-z 0-9 \.\_\/\~\%\-\+\&\#\?\!\=\(\)\@\:]+/
+	urlRegex: /[A-Z a-z 0-9 \.\_\/\~\%\-\+\&\#\?\!\=\@\:]+/
 	pathRegex: /[-\w\/\\\.\:]+/
 	httpRegex: /(http|https)\:\/\/[^\s]+/
 	editor: null
@@ -59,7 +59,7 @@ module.exports = OpenPath =
 		grammar = atom.grammars.grammarForScopeName(scopeName)
 		exts = grammar.fileTypes ? []
 		files = _.uniq ("#{path}.#{ext}" for ext in exts)
-		
+
 		file = _.detect files, @isfile
 		return file if file?
 

@@ -1,3 +1,6 @@
+## 0.3.2 - First Release
+fix bug
+
 ## 0.3.1 - First Release
 improve readme
 
