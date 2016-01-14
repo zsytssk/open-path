@@ -2,6 +2,7 @@ _shell = require 'shell'
 _path = require 'path'
 _fs = require 'fs-plus'
 _ = require 'underscore-plus'
+imageSize = require 'image-size'
 {CompositeDisposable} = require 'atom'
 
 module.exports = OpenPath =
@@ -10,11 +11,13 @@ module.exports = OpenPath =
 	pathRegex: /[-\w\/\\\.\:]+/
 	httpRegex: /(http|https)\:\/\/[^\s]+/
 	editor: null
+	imagesExtension: ['.jpg', '.png', '.gif']
 
 	activate: (state) ->
 		@subscriptions = new CompositeDisposable
 
-		@subscriptions.add atom.commands.add 'atom-text-editor', 'open-path:toggle':(event) => @toggle(event)
+		@subscriptions.add atom.commands.add 'atom-text-editor', 'open-path:open':(event) => @toggle(event)
+		@subscriptions.add atom.commands.add 'atom-text-editor', 'open-path:copy-image-size':(event) => @copyimagesize(event)
 
 	deactivate: ->
 		@subscriptions.dispose()
@@ -25,6 +28,16 @@ module.exports = OpenPath =
 			return _shell.openExternal("#{path}")
 		if path = @getpath()
 			return atom.workspace.open(path, searchAllPanes: true)
+		event.abortKeyBinding()
+
+	copyimagesize:(event) ->
+		@editor = atom.workspace.getActiveTextEditor()
+		if path = @getpath()
+			ext = _path.extname(path)
+			if ext in @imagesExtension
+				imageSize path, (err, result) ->
+					atom.clipboard.write('width: ' + result.width + ';' + '\n\theight: ' + result.height + ';')
+				return
 		event.abortKeyBinding()
 
 	geturl:() ->

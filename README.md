@@ -1,6 +1,7 @@
 ## open-path package  
 
-use one shortcut open url or path under cursor  
+* use 'open-path:open' to open url or file under cursor  
+* or 'open-path:copy-image-size' to copy image size like'width: width; height: height;'  
 
 ## Keymap  
 
@@ -8,13 +9,16 @@ use one shortcut open url or path under cursor
 
 ```coffeescript  
 '.platform-darwin atom-text-editor:not([mini])':  
-	'cmd-o': 'open-path:toggle'  
+	'cmd-o': 'open-path:open'  
+	'alt-c': 'open-path:copy-image-size'  
 
 '.platform-win32 atom-text-editor:not([mini])':  
-	'ctrl-o': 'open-path:toggle'  
+	'ctrl-o': 'open-path:open'  
+	'alt-c': 'open-path:copy-image-size'  
 
 '.platform-linux atom-text-editor:not([mini])':  
-	'ctrl-o': 'open-path:toggle'  
+	'ctrl-o': 'open-path:open'  
+	'alt-c': 'open-path:copy-image-size'  
 ```  
 
 ## Projects that inspired me!  
