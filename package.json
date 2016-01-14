@@ -8,7 +8,10 @@
     "open url"
   ],
   "activationCommands": {
-    "atom-workspace": "open-path:copy-image-size"
+    "atom-text-editor": [
+      "open-path:open",
+      "open-path:copy-image-size"
+    ]
   },
   "repository": "https://github.com/zsytssk/open-path",
   "license": "MIT",
