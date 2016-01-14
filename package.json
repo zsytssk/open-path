@@ -1,11 +1,13 @@
 {
   "name": "open-path",
   "main": "./lib/open-path",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "description": "open file or url under cursor by on shortcut",
-  "keywords": ["open file", "open url"],
+  "keywords": [
+    "open file",
+    "open url"
+  ],
   "activationCommands": {
-    "atom-workspace": "open-path:open",
     "atom-workspace": "open-path:copy-image-size"
   },
   "repository": "https://github.com/zsytssk/open-path",
