@@ -1,7 +1,7 @@
 ## open-path package  
 
 * use 'open-path:open' to open url or file under cursor  
-* or 'open-path:copy-image-size' to copy image size like'width: width; height: height;'  
+* use 'open-path:copy-image-size' to copy image size like'width: width; height: height;'  
 
 ## Keymap  
 

@@ -2,7 +2,7 @@
   "name": "open-path",
   "main": "./lib/open-path",
   "version": "0.3.5",
-  "description": "open file or url under cursor by on shortcut",
+  "description": "open file or url under cursor by one shortcut",
   "keywords": [
     "open file",
     "open url"
